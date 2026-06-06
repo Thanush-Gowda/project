@@ -209,5 +209,6 @@ nav a:hover {
       books.forEach(book => {
  const title = book.querySelector("h3").innerText.toLowerCase();
         const author = book.querySelector("p").innerText.toLowerCase();
-
+   book.style.display = (title.includes(query) || author.includes(query)) ? "block" : "none";
+      });
 
