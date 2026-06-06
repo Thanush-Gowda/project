@@ -199,5 +199,10 @@ nav a:hover {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(book);
       localStorage.setItem("cart", JSON.stringify(cart));
+  alert(book + " added to cart!");
+    }
+
+    function filterBooks() {
+      const query = document.getElementById("searchBox").value.toLowerCase();
 
 
