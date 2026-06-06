@@ -196,5 +196,8 @@ nav a:hover {
 
   <script>
     function addToCart(book) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(book);
+      localStorage.setItem("cart", JSON.stringify(cart));
 
 
