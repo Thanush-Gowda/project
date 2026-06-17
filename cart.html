@@ -195,4 +195,8 @@ cartList.appendChild(li);
       });
 
       summary.textContent = Total items in cart: ${cart.length};
+ }
+
+    function removeItem(index) {
+      if (confirm("Are you sure you want to remove this item?")) {
 
