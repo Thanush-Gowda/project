@@ -169,4 +169,9 @@ const summary = document.getElementById("cartSummary");
   if (cart.length === 0) {
         cartList.innerHTML = '<p class="empty-msg">Your cart is empty.</p>';
         return;
+   }
+
+      cart.forEach((book, index) => {
+        const li = document.createElement("li");
+
 
