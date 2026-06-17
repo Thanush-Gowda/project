@@ -209,4 +209,9 @@ cartList.appendChild(li);
 
     function clearCart() {
       if (confirm("This will remove all items. Continue?")) {
+  localStorage.removeItem("cart");
+        loadCart();
+      }
+    }
+
 
