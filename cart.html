@@ -161,4 +161,9 @@ footer {
  function loadCart() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const cartList = document.getElementById("cartItems");
+const summary = document.getElementById("cartSummary");
+
+      cartList.innerHTML = "";
+      summary.innerHTML = "";
+
 
