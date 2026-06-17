@@ -199,4 +199,9 @@ cartList.appendChild(li);
 
     function removeItem(index) {
       if (confirm("Are you sure you want to remove this item?")) {
+<S-Del>
+		         const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
 
