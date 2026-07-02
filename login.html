@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Bookstore</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+header {
+      background: #333;
+      color: white;
+      padding: 30px;
+      text-align: center;
+     }
+nav a {
+      margin: 0 10px;
+      color: #ffd700;
+      text-decoration: none;
+    }
+nav a:hover {
+      text-decoration: underline;
+    }
+main {
+      padding: 40px 20px;
+    }
+h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+form {
+      background: #fff;
+      padding: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+ label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+ .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+   }
+.checkbox-container input {
+      margin-right: 10px;
+    }
+.forgot-password {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+.forgot-password a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+.forgot-password a:hover {
+      text-decoration: underline;
+    }
+ button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+button:hover {
+      background-color: #555;
+    }
+.toggle-password {
+      position: relative;
+    }
+.toggle-password-btn {
+      position: absolute;
+      top: 38px;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      color: #007BFF;
+    }
+.social-login {
+      text-align: center;
+      margin-top: 20px;
+    }
+.social-login button {
+      margin: 5px;
+      background: #4267B2;
+    }
+ .google-btn {
+      background: #DB4437;
+    }
+.signup {
+      margin-top: 30px;
+      text-align: center;
+    }
+ .signup a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+.signup a:hover {
+      text-decoration: underline;
+    }
+
+footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+@media (max-width: 480px) {
+      form {
+        margin: 10px;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+  <h1>Amicart Bookstore</h1>
+  <nav>
+   <a href="index.html">Home</a>
+     <a href="books.html">Books</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+ </header>
+<main>
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="password">Password</label>
+      <div class="toggle-password">
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button type="button" class="toggle-password-btn" onclick="togglePassword()">Show</button>
+       </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+      <div class="social-login">
+        <p>Or login with:</p>
+        <button type="button">Facebook</button>
+        <button type="button" class="google-btn">Google</button>
+      </div>
+      <div class="signup">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </form>
+  </main>
+<footer>
+    <p>&copy; 2025 Amicart Bookstore. All rights reserved.</p>
+  </footer>
+<script>
+    function togglePassword() {
+    const passwordField = document.getElementById("password");
+    const toggleBtn = document.querySelector(".toggle-password-btn");
+if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleBtn.textContent = "Hide";
+      } else {
+        passwordField.type = "password";
+        toggleBtn.textContent = "Show";
+      }
+    }
+      document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+if (!username || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+// Simple login logic
+      if (username === "admin" && password === "1234") {
+        alert("Login successful!");
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid credentials. Try username: admin, password: 1234");
+      }
+      });
+  </script>
+</body>
+</html>

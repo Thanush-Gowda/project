@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore | Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f8;
+    }
+header {
+      background: #333;
+      color: #fff;
+      padding: 35px;
+      text-align: center;
+    }
+nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffd700;
+    }
+nav a:hover {
+      text-decoration: underline;
+    }
+main {
+      padding: 20px;
+    }
+
+    .categories ul {
+      list-style: none;
+      padding: 0;
+    }
+.categories li {
+      margin: 5px 0;
+      padding: 5px;
+      background: #e0e0e1;
+      border-radius: 5px;
+    }
+.featured-books {
+      margin-top: 40px;
+    }
+
+    .book {
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+.book h4 {
+      margin: 0 0 10px 0;
+    }
+
+    .book p {
+      margin: 0;
+    }
+.testimonials {
+      background: #f0f0f0;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+    }
+.testimonial {
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+.newsletter {
+      margin-top: 40px;
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+.newsletter input[type="email"] {
+      padding: 10px;
+      margin-right: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+.newsletter button {
+      padding: 10px 15px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background: #218838;
+    }
+ .contact {
+      margin-top: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+.contact form input,
+    .contact form textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+.contact form button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+.contact form button:hover {
+      background: #0056b3;
+    }
+
+    .faq {
+      margin-top: 40px;
+    }
+
+    .faq h4 {
+      margin-bottom: 5px;
+    }
+
+    .faq p {
+      margin-bottom: 20px;
+    }
+footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Amicart Bookstore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+<main>
+    <h2>Welcome to Amicart!</h2>
+    <p>Explore our collection of books and find your next read.</p>
+
+<section class="categories">
+      <h3>Categories</h3>
+      <ul>
+        <li>Fiction</li>
+        <li>Non-Fiction</li>
+        <li>Science</li>
+        <li>Biographies</li>
+        <li>Children's Books</li>
+        <li>Fantasy</li>
+        <li>Romance</li>
+        <li>History</li>
+        <li>Technology</li>
+        <li>Self-Help</li>
+      </ul>
+    </section>
+<section class="featured-books">
+      <h3>Featured Books</h3>
+      <div class="book">
+        <h4>The Silent Patient</h4>
+        <p>By Alex Michaelides - A thrilling psychological mystery.</p>
+      </div>
+<div class="book">
+        <h4>Atomic Habits</h4>
+        <p>By James Clear - Build good habits and break bad ones.</p>
+      </div>
+      <div class="book">
+        <h4>Educated</h4>
+        <p>By Tara Westover - A memoir about growing up and breaking free.</p>
+      </div>
+    </section>
+<section class="testimonials">
+      <h3>What Readers Say</h3>
+      <div class="testimonial">
+        "A wonderful collection of books. Fast delivery and great service!"
+      </div>
+      <div class="testimonial">
+        "Found exactly what I was looking for. Highly recommended!"
+      </div>
+      <div class="testimonial">
+        "Love the new arrivals every week. Keep it up, Amicart!"
+      </div>
+    </section>
+<section class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <p>Get the latest updates on new books and discounts.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+<section class="contact">
+      <h3>Contact Us</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+<section class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <h4>How do I place an order?</h4>
+      <p>Browse books, add them to your cart, and proceed to checkout.</p>
+<h4>What payment methods do you accept?</h4>
+      <p>We accept credit/debit cards and UPI payments.</p>
+<h4>Can I return a book?</h4>
+      <p>Yes, returns are accepted within 7 days of delivery.</p>
+    </section>
+  </main>
+<footer>
+    <p>&copy; 2025 Amicart Bookstore. All rights reserved.</p>
+  </footer>
+</body>
+</html>
